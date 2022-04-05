@@ -1,8 +1,9 @@
 # GCPerformanceTest
 A simple test to create flavors of Garbage Collection activities and application thread loads for measuring JVM performance
 
-===============================================================================================================================================================
-Program Details:
+=================================================
+
+**Program Details:**
 - Program first creates a LinkedList object (1 per thread)
 - It creates a base list (Number of objects in the list). Allocates objects mentioned in the "Base Size" param
 - In every runTime loop, program perform following actions per thread
@@ -13,9 +14,9 @@ Program Details:
 
 You can create different scenarios by configuring Threads/Object Size/Chunk Size/CPU Burn Time/Wait Time.
 
-===============================================================================================================================================================
+=================================================
 
-Usage:
+**Usage:**
 
 - Run with the flavor of JVM for which you want to test the performance
 java GCPerformanceTest [runLoopsLoops] [numThreads] [cpuTime] [waitTime] [objSize] [baseSize] [chunkSize] [warmUpLoops]
@@ -32,9 +33,9 @@ usr/java/jre1.8.0_45/bin/java -Xms400g  -Xmx400g  -XX:InitialCodeCacheSize=512m 
 128 => Chunk Size (Number of objects to allocate/deallocate per loop)
 0 => Number of warmup object allocation loops
 
-===============================================================================================================================================================
+=================================================
 
-Output:
+**Output:**
 
 * For Every Runtime Loop, program prints per thread
 - Loop#
@@ -55,5 +56,5 @@ Output:
 
 To get more details, please generate GC log file which can be later analyzed using GCEasy/GCLogAnalyzer
 
-===============================================================================================================================================================
+=================================================
 
